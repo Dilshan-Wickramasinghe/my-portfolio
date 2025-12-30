@@ -215,28 +215,33 @@
   </section>
 
   <section class="contact" id="contact">
-    <h2 class="heading">Contact <span>Me</span></h2>
+  <h2 class="heading">Contact <span>Me</span></h2>
 
-    <form action="https://api.web3forms.com/submit" method="POST" id="ContactForm">
-      <div class="input-group">
-        <div class="input-box">
-          <input type="hidden" name="access_key" value="1617d395-3166-402c-9997-cc712c01ca48">
-          <input id="name" type="text" placeholder="Full Name" />
-          <input id="email" type="email" placeholder="Enter Your Email" />
-        </div>
-        <div class="input-box">
-          <input type="hidden" name="access_key" value="1617d395-3166-402c-9997-cc712c01ca48">
-          <input id="phone" type="number" placeholder="Phone Number" />
-          <input id="title" type="text" placeholder="Subject" />
-        </div>
+  <form action="https://api.web3forms.com/submit" method="POST">
+
+    <!-- Web3Forms access key (required, only once) -->
+    <input type="hidden" name="access_key" value="1617d395-3166-402c-9997-cc712c01ca48">
+
+    <div class="input-group">
+      <div class="input-box">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Enter Your Email" required>
       </div>
 
-      <div class="input-group-2">
-        <textarea name="" id="msg" cols="30" rows="10" placeholder="Your Message"></textarea>
-        <input type="submit" value="Send Message" class="btn" />
+      <div class="input-box">
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <input type="text" name="subject" placeholder="Subject">
       </div>
-    </form>
-  </section>
+    </div>
+
+    <div class="input-group-2">
+      <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send Message" class="btn">
+    </div>
+
+  </form>
+</section>
+
 
   <footer class="footer">
     <div class="social">
